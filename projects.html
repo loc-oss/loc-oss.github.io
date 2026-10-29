@@ -1,0 +1,22 @@
+---
+layout: default
+title: All Projects
+---
+
+<div class="container project-content">
+  <h1>All Projects</h1>
+  <p>Here are the open-source projects we are currently building and maintaining.</p>
+
+  <div class="repo-list" style="margin-top: 2rem">
+    {% for project in site.projects %}
+    <a href="{{ project.url | relative_url }}" class="repo-item">
+      <div>
+        <span class="repo-name">{{ project.title }}</span>
+      </div>
+      <div class="repo-meta">
+        <span>{{ project.description }}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

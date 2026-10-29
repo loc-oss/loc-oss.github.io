@@ -1,0 +1,9 @@
+title: Lines of Code
+description: A community of OSS enthusiasts. We count every line.
+baseurl: ''
+url: 'https://loc-oss.github.io'
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name

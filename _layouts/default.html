@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}Lines of Code</title>
+    <meta
+      name="description"
+      content="{% if page.description %}{{ page.description }}{% else %}A community of OSS enthusiasts building minimal, local-first software.{% endif %}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <a href="{{ '/' | relative_url }}" class="brand">LOC.oss</a>
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}#principles">Principles</a></li>
+        <li><a href="{{ '/' | relative_url }}#repos">Repositories</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">All Projects</a></li>
+      </ul>
+      <a href="https://github.com/loc-oss" class="btn-nav" target="_blank">GitHub</a>
+    </nav>
+
+    <main style="flex: 1">{{ content }}</main>
+
+    <footer class="footer">
+      <div>&copy; 2026 LOC. We count every line.</div>
+      <div style="display: flex; gap: 1.5rem">
+        <a href="https://github.com/loc-oss" target="_blank">GitHub</a>
+        <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <h1>Building the foundation.<br />Line by line.</h1>
+  <p>
+    LOC is a community of developers building minimalist, local-first, and independent software.
+  </p>
+  <div class="hero-cta">
+    <a href="https://github.com/loc-oss" class="btn-primary" target="_blank">Join Us</a>
+    <a href="#principles" class="btn-secondary">Learn More</a>
+  </div>
+</section>
+
+<div class="container" id="principles">
+  <h2 class="section-title">// Philosophy</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Minimalism</h3>
+      <p>
+        Simple solutions over complex abstractions. Less code means fewer bugs. Clean architecture.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Local-First</h3>
+      <p>
+        User data should remain on the user's device. Tools that work fast without a mandatory cloud
+        dependency.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Quality</h3>
+      <p>A small, well-tested codebase is better than a massive, unmaintained one.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="repos" style="padding-top: 0">
+  <h2 class="section-title">// Codebase</h2>
+  <div class="repo-list">
+    <a href="https://github.com/loc-oss/loc-oss.github.io" class="repo-item" target="_blank">
+      <div>
+        <span class="repo-name">loc-oss.github.io</span><span class="repo-badge">PUBLIC</span>
+      </div>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Rust</span>
+      </div>
+    </a>
+    <a href="https://github.com/loc-oss/xi-editor" class="repo-item" target="_blank">
+      <div><span class="repo-name">xi-editor</span><span class="repo-badge">FORK</span></div>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Rust</span>
+      </div>
+    </a>
+    <a href="https://github.com/loc-oss/lumen" class="repo-item" target="_blank">
+      <div><span class="repo-name">lumen</span><span class="repo-badge">PRIVATE</span></div>
+      <div class="repo-meta">—</div>
+    </a>
+  </div>
+</div>
+
+<section class="cta">
+  <h2>Ready to contribute?</h2>
+  <p>Report a bug, suggest an idea, or send a pull request.</p>
+
+  <div class="code-block">
+    <div>
+      <span class="prompt">$</span>
+      <span id="clone-cmd">git clone https://github.com/loc-oss/loc-oss.github.io.git</span>
+    </div>
+    <span class="copy" onclick="copyCmd()">[copy]</span>
+  </div>
+
+  <a href="https://github.com/loc-oss" class="btn-primary" target="_blank">Go to GitHub</a>
+</section>
+
+<script>
+  function copyCmd() {
+    const cmd = document.getElementById('clone-cmd').innerText
+    navigator.clipboard.writeText(cmd).then(() => {
+      const hint = document.querySelector('.copy')
+      hint.innerText = '[copied]'
+      setTimeout(() => {
+        hint.innerText = '[copy]'
+      }, 2000)
+    })
+  }
+</script>
