@@ -6,4 +6,4 @@ url: 'https://loc-oss.github.io'
 collections:
   projects:
     output: true
-    permalink: /projects/:name
+    permalink: /projects/:name/
